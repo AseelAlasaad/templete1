@@ -23,7 +23,67 @@ a {
 ul {
     list-style: none;
 }
+/* Heroooooooooooooooooooooooo */
+h1,h2,h3,h4,h5,h6{
+    font-family: "Oswald, sans-serif";
 
+}
+.hero{
+    background:gray;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+ }
+
+ .hero h1, .hero h3{
+    font-size: 28px;
+    text-shadow: 2px 2px #000;
+    margin-bottom: 40px;
+ }
+
+.hero h1{
+    font-size: 60px;
+    margin-bottom: 15px;
+
+}
+.hero a.btn{
+    color: white;
+    background-color: #131633;
+    text-decoration: none;
+    padding: 20px 46px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    opacity: 1;
+    border: 2px solid white;
+}
+
+.hero a.btn:hover{
+    background-color: #2196f3;
+
+}
+@media  (max-width: 800px) {
+   
+    .hero h1{
+        font-size: 36px;
+    
+    }
+
+    .hero h3{
+        font-size: 18px;
+    
+    }
+    .hero a.btn{
+   
+        padding: 15px 40px;
+    }
+}
+
+/* Foooooooooooooooooooooooter */
 footer {
     background-color: #131622;
     color           : white;
@@ -34,6 +94,7 @@ footer {
     background      : linear-gradient(to bottom, #284e7a, #000 100%);
     padding         : 60px 0;
     display: flex;
+    
     flex-direction: column;
     align-items: center;
 }
@@ -47,6 +108,7 @@ footer p{
 footer ul{
     margin-bottom: 25px;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
 }
 footer ul li{
@@ -58,8 +120,8 @@ footer ul li a{
    cursor: pointer;
     
 }
+/* CSS rules for screens with a width of 768px or less go here */
 @media screen and (max-width: 768px) {
-    /* CSS rules for screens with a width of 768px or less go here */
     footer{
         padding: 80px 15px;
     }

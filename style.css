@@ -398,52 +398,68 @@ header nav ul li:last-child {
     }
 
 }
+
 #hamnav label,
 #hamburger {
     display: none;
 }
-  @media screen and (max-width: 768px) {
+
+@media screen and (max-width: 768px) {
+
+  
+
+    /* (A) BREAK INTO VERTICAL MENU */
+    #hamitems {
+      
+        box-sizing: border-box;
+        display   : block;
+        width     : 100%;
+
+        border-top: 1px solid #333;
+    }
+
+    /* (B) SHOW HAMBURGER ICON */
+    #hamnav{
+       top:0;
+        margin-left: auto;
+        
+    }
+    #hamnav label {
+  
+        display   : inline-block;
+        color     : white;
+        background: #101010;
+        font-style: normal;
+        font-size : 1.2em;
+        padding   : 10px;
+        cursor    : pointer;
+    }
+
+    #hamitems li {
+        
+        padding    : 5px 5px;
+        margin     : 5px 0;
+        font-weight: bold;
+        border-top : 1.5px solid #333;
+    }
+
+    #hamitems li:hover {
 
 
-            /* (A) BREAK INTO VERTICAL MENU */
-            #hamitems  {
-                box-sizing: border-box;
-              display: block;
-                width: 100%;
-               
-                border-top: 1px solid #333;
-            }
 
-            /* (B) SHOW HAMBURGER ICON */
-            #hamnav label {
-                display: inline-block;
-                color: white;
-                background: #101010;
-                font-style: normal;
-                font-size: 1.2em;
-                padding: 10px;
-                cursor: pointer;
-            }
-            #hamitems li {
 
-                margin: 5px 0;
-               font-weight: bold;
-            }
-            #hamitems li:hover{
+        background-color: #211d1d;
+    }
 
-                
-               background-color: #3c3b3b;
-            }
+    /* (C) TOGGLE SHOW/HIDE MENU */
+    #hamitems {
+        display: none;
+    }
 
-            /* (C) TOGGLE SHOW/HIDE MENU */
-            #hamitems {
-                display: none;
-            }
-
-            #hamnav input:checked~#hamitems {
-                display: block;
-            }
-        }
+    #hamnav input:checked~#hamitems {
+        display: block;
+    }
+}
 
 /* Foooooooooooooooooooooooter */
 footer {

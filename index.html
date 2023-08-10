@@ -12,15 +12,35 @@
         href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&family=Urbanist:ital,wght@1,100&family=Work+Sans&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
 
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-    <li class="small" nk rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
 </head>
 
 
-</head>
+
 
 <body id="top">
+    <header>
+        <h2><a href="#" target="_blank"><img src="img/logo.png" alt=""/></a></h2>
+        <nav id="hamnav">
+            <label for="hamburger">&#9776;</label>
+            <input type="checkbox" id="hamburger" />
+            <ul id="hamitems">
+                <li><a href="#top">Top</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#getting-around">Travel</a></li>
+                <li><a href="#famous-quotes">Quotes</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#links">Links</a></li>
+    
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ****************************************** -->
     <div class="hero">
         <div class="background-image"></div>
         <h1>Beautiful Alaskan Photo Portfolio</h1>
@@ -137,12 +157,27 @@
     <!-- ***************************************** -->
     <div id="contact">
         <h3 class="title">My Studio Location </h3>
+        <section class="flexbox-section">
+            <p>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3539.9924022214645!2d153.0259566!3d-27.469495900000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b915a04a8eef00d%3A0x7002e514b58528f2!2zMTU1IFF1ZWVuIFN0LCBCcmlzYmFuZSBDaXR5IFFMRCA0MDAw2Iwg2KPYs9iq2LHYp9mE2YrYpw!5e0!3m2!1sar!2sjo!4v1691662372841!5m2!1sar!2sjo"
+                    width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </p>
+            <p>
+                155 Queen Street<br>
+                Brisbane, 4000, QLD<br>
+                Australia
+            </p>
+
+
+        </section>
 
 
     </div>
     <!-- *************************************** -->
 
-    <footer>
+    <footer id="links">
         <ul>
             <li class="small"><a href="#" target="_blank"><i class="fab fa-twitter-square"></i></a></li class="small">
             <li class="small"><a href="#" target="_blank"><i class="fab fa-facebook-square"></i></a></li class="small">
@@ -159,6 +194,21 @@
             &ldquo; &mdash;Benjamin Frankli class="small"n</p>
 
     </footer>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('a[href^="#"]').on('click',function (e) {e.preventDefault();
+    
+            var target = this.hash;
+            var $target = $(target);
+    
+            $('html, body').stop().animate({
+                'scrollTop': $target.offset().top-100
+            }, 900, 'swing', function () {
+                window.location.hash = target-100;
+            });
+               });
+    });
+    </script>
 </body>
 
 </html>
